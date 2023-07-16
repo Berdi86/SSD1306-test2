@@ -294,7 +294,7 @@ unsigned char Obaintemperature(void)
     fgets(buff,sizeof(buff),fd);
     sscanf(buff, "%d", &temp);
     fclose(fd);
-    return TEMPERATURE_TYPE == CELSIUS ? temp/1000*1.8+32 : temp/1000;
+    return TEMPERATURE_TYPE == CELSIUS ? temp/1000 : temp/1000;
 
 }
 
