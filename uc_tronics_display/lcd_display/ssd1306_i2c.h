@@ -8,8 +8,8 @@ This library just support 128X32 lcd with i2c interface;
 extern int i2cd;
 
 /**********Select display temperature type**************/
-#define CELSIUS       1
-#define FAHRENHEIT    0
+#define CELSIUS       0
+#define FAHRENHEIT    1
 #define TEMPERATURE_TYPE  CELSIUS
 /**********Select display temperature type**************/
 
