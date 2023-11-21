@@ -432,13 +432,13 @@ char* GetIpAddress(void)
     int fd;
     struct ifreq ifr;
     int symbol=0;
-    if (IPADDRESS_TYPE == ETH0_ADDRESS)
+    if (IPADDRESS_TYPE == END0_ADDRESS)
     {
       fd = socket(AF_INET, SOCK_DGRAM, 0);
       /* I want to get an IPv4 IP address */
       ifr.ifr_addr.sa_family = AF_INET;
-      /* I want IP address attached to "eth0" */
-      strncpy(ifr.ifr_name, "eth0", IFNAMSIZ-1);
+      /* I want IP address attached to "end0" */
+      strncpy(ifr.ifr_name, "end0", IFNAMSIZ-1);
       symbol=ioctl(fd, SIOCGIFADDR, &ifr);
       close(fd);
       if(symbol==0)
