@@ -14,9 +14,9 @@ extern int i2cd;
 /**********Select display temperature type**************/
 
 /**********Select display network IP type**************/
-#define END0_ADDRESS    0
+#define ETH0_ADDRESS    0
 #define WLAN0_ADDRESS   1
-#define IPADDRESS_TYPE  END0_ADDRESS
+#define IPADDRESS_TYPE  ETH0_ADDRESS
 /**********Select display network IP type**************/
 
 
