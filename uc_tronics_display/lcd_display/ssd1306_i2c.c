@@ -259,7 +259,7 @@ void LCD_DisplayTemperature(void)
   OLED_DrawBMP(0,0,128,4,BMP,TEMPERATURE_TYPE);
   if (IP_SWITCH == IP_DISPLAY_OPEN)
   {
-    strcpy(IPSource,GetIpAddress());   //Get the IP address of the device's wireless network card
+    strcpy(IPSource,GetIpAddress());   //Get the IP address of the device's wired network card
     OLED_ShowString(0,0,IPSource,8);          //Send the IP address to the lower machine
   }
   else
@@ -432,13 +432,13 @@ char* GetIpAddress(void)
     int fd;
     struct ifreq ifr;
     int symbol=0;
-    if (IPADDRESS_TYPE == ETH0_ADDRESS)
+    if (IPADDRESS_TYPE == END0_ADDRESS)
     {
       fd = socket(AF_INET, SOCK_DGRAM, 0);
       /* I want to get an IPv4 IP address */
       ifr.ifr_addr.sa_family = AF_INET;
-      /* I want IP address attached to "eth0" */
-      strncpy(ifr.ifr_name, "eth0", IFNAMSIZ-1);
+      /* I want IP address attached to "end0" */
+      strncpy(ifr.ifr_name, "end0", IFNAMSIZ-1);
       symbol=ioctl(fd, SIOCGIFADDR, &ifr);
       close(fd);
       if(symbol==0)
