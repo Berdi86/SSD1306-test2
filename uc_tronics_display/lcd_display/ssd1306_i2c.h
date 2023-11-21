@@ -21,9 +21,9 @@ extern int i2cd;
 
 
 /************************Turn off the IP display. Can customize the display****************/
-#define IP_DISPLAY_OPEN     0
-#define IP_DISPLAY_CLOSE    1
-#define IP_SWITCH       IP_DISPLAY_OPEN
+#define IP_DISPLAY_OPEN     1
+#define IP_DISPLAY_CLOSE    0
+#define IP_SWITCH       IP_DISPLAY_CLOSE
 #define CUSTOM_DISPLAY   "BERDITRONICS"
 /************************Turn off the IP display. Can customize the display****************/
 
