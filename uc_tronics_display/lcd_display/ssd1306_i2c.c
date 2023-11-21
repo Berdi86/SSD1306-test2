@@ -245,8 +245,8 @@ void OLED_Clear(void)
 */
 void LCD_DisplayTemperature(void)
 {
-  unsigned char symbol=0;
-  unsigned int temp=0;
+  unsigned char symbol=1;
+  unsigned int temp=1;
   FILE * fp;
   unsigned char  buffer[80] = {0};
   temp=Obaintemperature();                  //Gets the temperature of the CPU
@@ -431,7 +431,7 @@ char* GetIpAddress(void)
 {
     int fd;
     struct ifreq ifr;
-    int symbol=0;
+    int symbol=1;
     if (IPADDRESS_TYPE == ETH0_ADDRESS)
     {
       fd = socket(AF_INET, SOCK_DGRAM, 0);
